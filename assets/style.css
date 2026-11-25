@@ -220,7 +220,9 @@ section{scroll-margin-top:24px}
   color:var(--gold-deep);
   font-variant-numeric:tabular-nums;
   letter-spacing:.01em;
+  white-space:nowrap;
 }
+.timeline__time .approx{font-size:.72em;font-weight:500;margin-left:1px}
 .timeline__label{font-size:11.5px;letter-spacing:.18em;color:var(--muted);margin-bottom:2px}
 .timeline__name{font-family:var(--serif);font-size:1.14rem;color:var(--green);line-height:1.5}
 .timeline__name .dim{font-family:var(--sans);font-size:.8em;color:var(--muted)}
@@ -266,6 +268,7 @@ section{scroll-margin-top:24px}
 }
 .venue__info dt{font-size:13px;font-weight:600;color:var(--gold-deep);letter-spacing:.04em;padding-top:2px}
 .venue__info dd{color:#3C3A32;line-height:1.6}
+.teltext{color:var(--green);text-decoration:none;border-bottom:1px solid rgba(30,58,47,.25);font-variant-numeric:tabular-nums}
 .venue__sub{margin:18px 0 0;border-radius:14px;overflow:hidden;border:1px solid rgba(180,138,74,.18)}
 .venue__sub img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
 .venue__actions{display:flex;gap:10px;margin-top:20px}
@@ -286,8 +289,10 @@ section{scroll-margin-top:24px}
   letter-spacing:.01em;
   text-decoration:none;
   cursor:pointer;
+  white-space:nowrap;
   transition:transform .14s ease, box-shadow .18s ease, background .18s ease;
 }
+.btn svg{width:17px;height:17px;flex:none}
 .btn:active{transform:translateY(1px)}
 .btn--solid{background:var(--green);color:#F8F2E6;box-shadow:0 10px 22px -16px rgba(30,58,47,.9)}
 .btn--solid:hover{background:var(--green-2)}
@@ -344,8 +349,9 @@ section{scroll-margin-top:24px}
   background:var(--cream-deep);
   border-top:1px solid rgba(180,138,74,.22);
 }
-.footer__date{margin-top:18px;font-size:13px;letter-spacing:.14em;color:var(--muted)}
-.footer__sign{margin-top:8px;font-family:var(--serif);font-size:1.14rem;color:var(--green);letter-spacing:.04em}
+.footer__school{margin-top:18px;font-family:var(--serif);font-size:15px;letter-spacing:.05em;color:var(--green)}
+.footer__date{margin-top:5px;font-size:13px;letter-spacing:.12em;color:var(--muted)}
+.footer__sign{margin-top:14px;font-family:var(--serif);font-size:1.14rem;color:var(--green);letter-spacing:.04em}
 
 /* ---------- bottom bar / toast ---------- */
 .bottombar{
