@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>QA 미리보기 (390px)</title>
-<style>html,body{margin:0;background:#e9e6df}iframe{display:block;width:390px;height:4200px;border:0;margin:0 auto;background:#fff}</style>
+<style>html,body{margin:0;height:100%;overflow:hidden;background:#e9e6df}
+iframe{display:block;width:390px;height:844px;border:0;margin:0 auto;background:#fff}</style>
 </head><body>
-<iframe src="/" title="mobile 390"></iframe>
+<iframe id="f" src="/" title="mobile 390"></iframe>
+<script>
+  var f = document.getElementById('f');
+  function prep() {
+    try {
+      var d = f.contentDocument;
+      if (!d) return;
+      // top viewport capture: leave as is.  #full: hide the fixed bar so segments stitch cleanly
+      if (location.hash === '#full') {
+        var s = d.createElement('style');
+        s.textContent = '.bottombar{display:none!important} body{padding-bottom:0!important} .reveal{opacity:1!important;transform:none!important;transition:none!important}';
+        d.head.appendChild(s);
+      }
+    } catch (e) {}
+  }
+  f.addEventListener('load', prep);
+</script>
 </body></html>
