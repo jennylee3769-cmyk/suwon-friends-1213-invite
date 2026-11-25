@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QA 미리보기 (1440px)</title>
+<style>html,body{margin:0;height:100%;overflow:hidden;background:#e9e6df}
+iframe{display:block;width:1440px;height:900px;border:0;margin:0 auto;background:#fff}</style>
+</head><body>
+<iframe id="f" title="desktop 1440"></iframe>
+<script>
+  var f = document.getElementById('f');
+  function prep() {
+    try {
+      var d = f.contentDocument;
+      if (!d) return;
+      var st = d.createElement('style');
+      st.textContent = 'html{scrollbar-width:none} ::-webkit-scrollbar{display:none}';
+      if (location.hash === '#full') {
+        st.textContent += '.reveal{opacity:1!important;transform:none!important;transition:none!important}';
+      }
+      d.head.appendChild(st);
+    } catch (e) {}
+  }
+  f.addEventListener('load', prep);
+  f.src = '/?cb=' + Date.now();
+</script>
+</body></html>
