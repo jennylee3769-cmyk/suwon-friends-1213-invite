@@ -344,11 +344,13 @@ section{scroll-margin-top:24px}
 /* ---------- footer ---------- */
 .footer{
   margin-top:70px;
-  padding:44px 22px 40px;
+  padding:48px 22px 44px;
   text-align:center;
   background:var(--cream-deep);
   border-top:1px solid rgba(180,138,74,.22);
 }
+.footer > *{max-width:720px;margin-left:auto;margin-right:auto}
+.footer .hero__rule{justify-content:center;display:flex}
 .footer__school{margin-top:18px;font-family:var(--serif);font-size:15px;letter-spacing:.05em;color:var(--green)}
 .footer__date{margin-top:5px;font-size:13px;letter-spacing:.12em;color:var(--muted)}
 .footer__sign{margin-top:14px;font-family:var(--serif);font-size:1.14rem;color:var(--green);letter-spacing:.04em}
