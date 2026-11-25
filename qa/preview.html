@@ -11,6 +11,9 @@ iframe{display:block;width:390px;height:844px;border:0;margin:0 auto;background:
     try {
       var d = f.contentDocument;
       if (!d) return;
+      var hide = d.createElement('style');
+      hide.textContent = 'html{scrollbar-width:none} ::-webkit-scrollbar{display:none}';
+      d.head.appendChild(hide);
       // top viewport capture: leave as is.  #full: hide the fixed bar so segments stitch cleanly
       if (location.hash === '#full') {
         var s = d.createElement('style');
