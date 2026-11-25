@@ -12,3 +12,8 @@
 - 모바일 퍼스트 반응형
 
 정적 페이지입니다. `index.html` 하나로 동작하며 별도 빌드가 없습니다.
+
+## 공개 배포
+- 사이트: https://suwon-friends-1213-invite.vercel.app/
+- GitHub `main` 브랜치에 push하면 Vercel이 자동으로 다시 배포합니다.
+- 카톡 공유 미리보기용 이미지: `assets/og-cover.jpg`
